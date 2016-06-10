@@ -857,3 +857,16 @@ float:left;
     .homedivs .grey {
     margin-top:10px;
     }
+.sidePicMargin {
+margin-top:20px;
+}
+/*whats on*/
+.whatsOnPic img {
+width: 216px;
+border-radius: 20% 0px;
+  float: left;
+    margin-right: 10px;
+}
+.whatsOn .col-sm-12 {
+  padding:0;
+}

@@ -29,8 +29,8 @@
     <title>Melissa Bar and Cafe</title>
 
     <!-- [favicon] begin -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <!-- Touch icons more info: http://mathiasbynens.be/notes/touch-icons -->
     <!-- For iPad3 with retina display: -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x.png" />
@@ -46,6 +46,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
     <!-- RESET STYLESHEET -->
     <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- MAIN THEME STYLESHEET -->
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" id="max-width-1024-css" href="css/max-width-1024.css" type="text/css" media="screen and (max-width: 1240px)" />
@@ -65,6 +66,8 @@
     <link rel='stylesheet' href='css/font-awesome.css' type='text/css' media='all' />
 
     <!-- JAVASCRIPTs -->
+
+    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/comment-reply.js"></script>
     <script type="text/javascript" src="js/jquery.quicksand.js"></script>
@@ -123,17 +126,17 @@
                             </li>
 
                             <li>
-                                <a href="#">eat & drink</a>
+                                <a href="eatDrink.html">eat & drink</a>
 
                             </li>
 
                             <li>
-                                <a href="#">functions</a>
+                                <a href="functions.html">functions</a>
 
                             </li>
 
                             <li>
-                                <a href="#">what's on</a>
+                                <a href="whatsOn.html">what's on</a>
 
                             </li>
 
@@ -164,18 +167,18 @@
             <!-- END HEADER -->
 
             <!-- BEGIN NIVO SLIDER -->
-            <div id="slider-flexslider" class="slider flexslider" style="width:100%; height: 400px;">
+            <!--<div id="slider-flexslider" class="slider flexslider" style="width:100%; height: 400px;">
                 <ul class="slides">
                     <li>
-                        <img src="images/slider-flex/0018.jpg" alt="0018" title="0018" />
+                        <img src="images/slider-flex/functions.jpg" alt="Melissa" title="Melissa" />
                         <div class="slider-caption caption-left">
-                            <h2>Eat & Drink</h2>
+                            <h2>Functions & Events</h2>
 
                         </div>
                     </li>
                    
                 </ul>
-            </div>
+            </div>-->
             <script type="text/javascript">
                 jQuery(document).ready(function ($) {
                     $('#slider-flexslider.flexslider img.attachment-full').css('width', '1200px').css('height', '400px');
@@ -214,74 +217,140 @@
                         before: flex_caption_hide,
                         after: flex_caption_show
                     });
-
                     $(".button-fill").hover(function () {
                         $(this).children(".button-inside").addClass('full');
                     }, function () {
                         $(this).children(".button-inside").removeClass('full');
                     });
+                    $(".button-fill").hover(function () {
+                        $(this).children(".imgAnimation").addClass('fullImage');
+                    }, function () {
+                        $(this).children(".imgAnimation").removeClass('fullImage');
+                    });
                 });
             </script>
 
             <!-- START PRIMARY -->
-            <div class="mainDiv">
+            <div class="mainDiv whatsOn">
 
                 <div>
-                    <div class=" col-lg-6">
-                        <h3>Menu</h3>
+                    <div class="col-sm-6">
+                        <h3>What's On</h3>
                         <div class="justify">
-                            It is a long established fact that a reader will be 
-                            distracted by the readable content of a page when looking at 
-                            its layout. The point of using Lorem Ipsum is that it has a more-or-less 
-                            normal distribution of letters, as opposed to using 'Content here, content here', 
-                            making it look like readable English. Many desktop publishing packages and web page
-                             editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' 
-                            will uncover many web sites still in their infancy. Various versions have evolved over the years, 
-                            sometimes by accident, sometimes on purpose (injected humour and the like).
+                            Look no further than Melissa Restaurant & Bar for your next event! Be it a social gathering with friends, cocktail party or group dinner – we have a space to suit your occasion. Exclusive dining spaces are available for groups of up to 90 guests and cocktail areas available for groups of 200 or less.
+
+
+
+                            Select one of our set menu options for a group dinner or a drinks and canapé package for cocktail style functions.
+
                         </div>
-                        <div class="header col-lg-6">
-                            <h3>Coming up in our world!</h3>
-                            <div class="justify">
-                                At Melissa Bar Café it's all about quality food, a warm atmosphere, and friendly professional service.At Melissa Bar Café it's all about quality food, a warm atmosphere, and friendly professional service.At Melissa Bar Café it's all about quality food, a warm atmosphere, and friendly professional service.At Melissa Bar Café it's all about quality food, a warm atmosphere, and friendly professional service.
-                                At Melissa Bar Café it's all about quality food, a warm atmosphere, and friendly professional service.At Melissa Bar Café it's all about quality food, a warm atmosphere, and friendly professional service.At Melissa Bar Café it's all about quality food, a warm atmosphere, and friendly professional service.
+                        <div class="col-sm-12 ">
+                            <div class="whatsOnPic img-responsive">
+                                <img src="images/features/coffee-01.jpg" />
                             </div>
+                            <div class="whatsOnPic img-responsive">
+                                <img src="images/features/whatsOn1.jpg" />
+                            </div>
+                        </div>
+
+                        <div class="homedivs">
+                            <h5> End of Financial Year Celebration</h5>
+                            <div>
+                                Celebrate the end of financial year and treat your team to Riverside Revelry.
+
+                                Click More Info to make an enquiry now.
+                            </div>
+                            <a href="#">
+                                <div class="button-fill grey">
+                                    <div class="button-text">More Info</div>
+                                    <div class="button-inside">
+                                        <div class="inside-text">More Info</div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <hr class="borderhr">
+                        </div>
+                        <div class="homedivs">
+                            <h5>MAY WE ENTICE YOU....</h5>
+                            <div>
+                                It is a long established fact that a reader will be
+                                distracted by the readable content of a page when looking at
+                                its layout.
+                            </div>
+                            <a href="#">
+                                <div class="button-fill grey">
+                                    <div class="button-text">More Info</div>
+                                    <div class="button-inside">
+                                        <div class="inside-text">More Info</div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <hr class="borderhr">
+                        </div>
+                        <div class="homedivs">
+                            <h5>MAY WE ENTICE YOU....</h5>
+                            <div>
+                                It is a long established fact that a reader will be
+                                distracted by the readable content of a page when looking at
+                                its layout.
+                            </div>
+                            <a href="#">
+                                <div class="button-fill grey">
+                                    <div class="button-text">More Info</div>
+                                    <div class="button-inside">
+                                        <div class="inside-text">More Info</div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <hr class="borderhr">
                         </div>
                     </div>
                 </div>
-           
-                 <div class="col-lg-6 sayHello">
-                    <div class=" col-lg-6">
-                        <h3>Menus</h3>
-
-
-
-                        <a href="#">
-                            <div class="button-fill grey">
-                                <div class="button-text">Break Fast Menu</div>
-                                <div class="button-inside">
-                                    <div class="inside-text">Break&nbspFast&nbspMenu</div>
-                                </div>
-                            </div>
-
-                        </a>
-                        <a href="#">
-                            <div class="button-fill grey">
-                                <div class="button-text">Lunch & Dinner Menu</div>
-                                <div class="button-inside">
-                                    <div class="inside-text">Lunch&nbspDinner&nbspMenu</div>
-                                </div>
-                            </div>
-
-                        </a>
-
-                    </div>
-
+                
+                <div class="col-sm-6 sidePicMargin">
+                    <img class="img-responsive" src="images/features/whatsOn.jpg" />
                 </div>
-
-
-
             </div>
-            
+            <div class="col-sm-12">
+                <div>Click on a thumbnail for this week’s menu</div>
+                <div style="float: left;">
+                     <a href="#">
+                            <div class="button-fill grey imgHovereffect">
+                                <div class="button-text imgHover">
+                                    <img src="images/articles/img1.jpg"></div>
+                                <div class="imgAnimation">
+                                    <div class="inside-text">$18 Lunch Break<img src="images/articles/img1.jpg"></div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                 <div style="float: left;">
+                     <a href="#">
+                            <div class="button-fill grey imgHovereffect">
+                                <div class="button-text imgHover">
+                                    <img src="images/articles/img2.jpg"></div>
+                                <div class="imgAnimation">
+                                    <div class="inside-text">Happy Hour<img src="images/articles/img2.jpg"></div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                
+                <div style="float: left;">
+                     <a href="#">
+                            <div class="button-fill grey imgHovereffect">
+                                <div class="button-text imgHover">
+                                    <img src="images/articles/img3.jpg"></div>
+                                <div class="imgAnimation">
+                                    <div class="inside-text">Function Packages<img src="images/articles/img3.jpg"></div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+            </div>
             <!-- START FOOTER -->
              <div class="footer">
                  <div class="border"><hr></div>
@@ -298,7 +367,7 @@
         <!-- END WRAPPER -->
     </div>
     <!-- END BG SHADOW -->
-   
+
     <script type="text/javascript" src="js/jquery.custom.js"></script>
     <script type="text/javascript" src="js/contact.js"></script>
     <script type="text/javascript" src="js/jquery.mobilemenu.js"></script>
