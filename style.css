@@ -177,7 +177,9 @@ html { min-height:101% }
 
 
 #header div.menu {background-color:#fff; }
-
+ul li {
+list-style:none;
+}
 #header .menu {
     height: 45px;
     padding: 0;
@@ -862,11 +864,143 @@ margin-top:20px;
 }
 /*whats on*/
 .whatsOnPic img {
-width: 216px;
+width: 156px;
 border-radius: 20% 0px;
   float: left;
-    margin-right: 10px;
+    margin: 10px;
 }
 .whatsOn .col-sm-12 {
   padding:0;
 }
+
+/*Image Effects*/
+
+
+.demo-3 {
+    position:relative;
+    width:100px;
+    height:200px;
+    overflow:hidden;
+    float:left;
+    margin-right:20px
+}
+.demo-3 figure {
+    margin:0;
+    padding:0;
+    cursor:pointer;
+}
+.demo-3 figure img {
+    display:block;
+    position:absolute;
+    z-index:10;
+    /*margin:-15px 0*/
+}
+.demo-3 figure figcaption {
+    display:block;
+    position:absolute;
+    z-index:5;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.demo-3 figure h2 {
+    font-family:'Lato';
+    color:#000;
+    font-size:20px;
+    text-align:left
+}
+.demo-3 figure p {
+    display:block;
+    font-family:'Lato';
+    font-size:12px;
+    line-height:18px;
+    margin:0;
+    color:#fff;
+    text-align:left
+}
+.demo-3 figure figcaption {
+   
+    width: 156px;
+height: 200px;
+    padding:29px 44px;
+ background-color: rgba(35,35,36,1);
+    text-align:center;
+    backface-visibility:hidden;
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;
+    border-radius: 30% 0;
+}
+.demo-3 figure img {
+    backface-visibility:hidden;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;
+
+}
+.demo-3 figure:hover img,figure.hover img {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    transform:rotateY(180deg)
+}
+.demo-3 figure:hover figcaption,figure.hover figcaption {
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    transform:rotateY(0)
+}
+/*single Pic*/
+
+
+.demo-2 {
+    position:relative;
+    width:300px;
+    height:200px;
+    overflow:hidden;
+    float:left;
+    margin-right:20px;
+    background-color:rgba(26,76,110,0.5)
+}
+.demo-2 p,.demo-2 h2 {
+    color:#fff;
+    padding:10px;
+    left:-20px;
+    top:20px;
+    position:relative
+}
+.demo-2 p {
+    font-family:'Lato';
+    font-size:12px;
+    line-height:18px;
+    margin:0
+}
+.demo-2 h2 {
+    font-size:20px;
+    line-height:24px;
+    margin:0;
+    font-family:'Lato'
+}
+.effect img {
+    position:absolute;
+    left:0;
+    bottom:0;
+    cursor:pointer;
+    margin:-12px 0;
+    -webkit-transition:bottom .3s ease-in-out;
+    -moz-transition:bottom .3s ease-in-out;
+    -o-transition:bottom .3s ease-in-out;
+    transition:bottom .3s ease-in-out
+}
+.effect img.top:hover {
+    bottom:-96px;
+    padding-top:100px
+}
+h2.zero,p.zero {
+    margin:0;
+    padding:0
+}
+
+
+
