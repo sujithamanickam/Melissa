@@ -961,7 +961,6 @@ height: 200px;
     overflow:hidden;
     float:left;
     margin-right:20px;
-    background-color:rgba(26,76,110,0.5)
 }
 .demo-2 p,.demo-2 h2 {
     color:#fff;
@@ -1001,6 +1000,18 @@ h2.zero,p.zero {
     margin:0;
     padding:0
 }
+.imgDescription {
+float: left;
+clear: both;
+bottom: 46px;
+position: absolute;
+text-align: center;
+display: inline-block;
+}
 
-
+.imgDescription p {
+    color: rgb(28, 25, 25);
+font-size:14px;
+background-color: rgb(255, 255, 255);
+    }
 
