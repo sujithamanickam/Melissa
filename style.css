@@ -873,7 +873,7 @@ border-radius: 20% 0px;
   padding:0;
 }
 
-/*Image Effects*/
+/*Image Effects
 
 
 .demo-3 {
@@ -893,7 +893,7 @@ border-radius: 20% 0px;
     display:block;
     position:absolute;
     z-index:10;
-    /*margin:-15px 0*/
+    /*margin:-15px 0
 }
 .demo-3 figure figcaption {
     display:block;
@@ -963,9 +963,8 @@ height: 200px;
     margin-right:20px;
 }
 .demo-2 p,.demo-2 h2 {
-    color:#fff;
+    color:#585555;
     padding:10px;
-    left:-20px;
     top:20px;
     position:relative
 }
@@ -982,6 +981,7 @@ height: 200px;
     font-family:'Lato'
 }
 .effect img {
+    width:200px;
     position:absolute;
     left:0;
     bottom:0;
@@ -1014,4 +1014,6 @@ display: inline-block;
 font-size:14px;
 background-color: rgb(255, 255, 255);
     }
-
+.justify p {
+font-size:15px;
+}
