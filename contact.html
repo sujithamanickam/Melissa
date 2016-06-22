@@ -84,7 +84,32 @@
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <!-- nav -->
     <script type="text/javascript" src="js/jquery.tweetable.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js">
+    </script>
 
+    <script>
+        var myCenter = new google.maps.LatLng(-37.9884840, 145.2143500);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:15
+,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </head>
 <!-- END HEAD -->
 
@@ -104,8 +129,9 @@
 
                     <!-- START LOGO -->
                     <div id="logo" class="group">
-                        <a href="index.html" title="Melissa">
-                            <img src="images/logo.png" title="Melissa" alt="Melissa" /></a>
+                        <a href="indexNew.html" title="Melissa">
+                            <img src="images/logo.png" title="Melissa" alt="Melissa" />
+                        </a>
                     </div>
                     <!-- END LOGO -->
 
@@ -121,7 +147,7 @@
                         <ul id="nav" class="menu">
 
                             <li>
-                                <a href="index.html">home</a>
+                                <a href="indexNew.html">home</a>
 
                             </li>
 
@@ -165,18 +191,17 @@
 
             </div>
             <!-- END HEADER -->
-
             <!-- BEGIN NIVO SLIDER -->
             <div id="slider-flexslider" class="slider flexslider" style="width:100%; height: 400px;">
                 <ul class="slides">
                     <li>
-                        <img src="images/slider-flex/functions.jpg" alt="Melissa" title="Melissa" />
+                        <img src="images/slider-flex/contact.jpg" alt="Melissa" title="Melissa" />
                         <div class="slider-caption caption-left">
                             <h2>Contact Us!</h2>
 
                         </div>
                     </li>
-                   
+
                 </ul>
             </div>
             <script type="text/javascript">
@@ -238,62 +263,62 @@
                         <h3>Contact Us!</h3>
                         <div class="justify">
                             03 9794 6697 - RING RING!
-info@melissabarcafe.com.au
-225 Lonsdale Street, Dandenong, Victoria 
+                            info@melissabarcafe.com.au
+                            225 Lonsdale Street, Dandenong, Victoria
 
                         </div>
                         <div id="content-page" class="content group">
-				            <div class="hentry group">
-				                <form id="contact-form-contact-us" class="contact-form" method="post" action="sendmail.PHP" enctype="multipart/form-data">
-				                    <div class="usermessagea"></div>
-				                    <fieldset>
-				                        <ul>
-				                            <li class="text-field">
-				                                <label for="name-contact-us">
-				                                <span class="label">Name</span>
-				                                <br>					<span class="sublabel">This is the name</span><br>
-				                                </label>
-				                                <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span><input name="name" id="name-contact-us" class="required" value="" type="text"></div>
-				                                <div class="msg-error"></div>
-				                            </li>
-				                            <li class="text-field">
-				                                <label for="email-contact-us">
-				                                <span class="label">Email</span>
-				                                <br>					<span class="sublabel">This is a field email</span><br>
-				                                </label>
-				                                <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span><input name="email" id="email-contact-us" class="required email-validate" value="" type="text"></div>
-				                                <div class="msg-error"></div>
-				                            </li>
-				                            <li class="textarea-field">
-				                                <label for="message-contact-us">
-				                                <span class="label">Message</span>
-				                                </label>
-				                                <div class="input-prepend"><span class="add-on"><i class="icon-pencil"></i></span><textarea name="message" id="message-contact-us" rows="8" cols="30" class="required"></textarea></div>
-				                                <div class="msg-error"></div>
-				                            </li>
-				                            <li class="submit-button">
-				                                <input name="yit_bot" id="yit_bot" type="text">
-				                                <input name="yit_action" value="sendmail" id="yit_action" type="hidden">
-				                                <input name="yit_referer" value="http://yourinspirationtheme.com/demo/pinkrio/corporate/contact/" type="hidden">
-				                                <input name="id_form" value="126" type="hidden">
-				                                <input name="yit_sendmail" value="Send Message" class="sendmail alignright" type="submit">			
-				                            </li>
-				                        </ul>
-				                    </fieldset>
-				                </form>
-				                <script type="text/javascript">
-				                    var messages_form_126 = {
-				                        name: "Please, fill in your name",
-				                        email: "Please, insert a valid email address",
-				                        message: "Please, insert your message"
-				                    };
-				                </script>
-				            </div>
-				            <!-- START COMMENTS -->
-				            <div id="comments">
-				            </div>
-				            <!-- END COMMENTS -->
-				        </div>
+                            <div class="hentry group">
+                                <form id="contact-form-contact-us" class="contact-form" method="post" action="sendmail.PHP" enctype="multipart/form-data">
+                                    <div class="usermessagea"></div>
+                                    <fieldset>
+                                        <ul>
+                                            <li class="text-field">
+                                                <label for="name-contact-us">
+                                                    <span class="label">Name</span>
+                                                    <br>					<span class="sublabel">This is the name</span><br>
+                                                </label>
+                                                <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span><input name="name" id="name-contact-us" class="required" value="" type="text"></div>
+                                                <div class="msg-error"></div>
+                                            </li>
+                                            <li class="text-field">
+                                                <label for="email-contact-us">
+                                                    <span class="label">Email</span>
+                                                    <br>					<span class="sublabel">This is a field email</span><br>
+                                                </label>
+                                                <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span><input name="email" id="email-contact-us" class="required email-validate" value="" type="text"></div>
+                                                <div class="msg-error"></div>
+                                            </li>
+                                            <li class="textarea-field">
+                                                <label for="message-contact-us">
+                                                    <span class="label">Message</span>
+                                                </label>
+                                                <div class="input-prepend"><span class="add-on"><i class="icon-pencil"></i></span><textarea name="message" id="message-contact-us" rows="8" cols="30" class="required"></textarea></div>
+                                                <div class="msg-error"></div>
+                                            </li>
+                                            <li class="submit-button">
+                                                <input name="yit_bot" id="yit_bot" type="text">
+                                                <input name="yit_action" value="sendmail" id="yit_action" type="hidden">
+                                                <input name="yit_referer" value="http://yourinspirationtheme.com/demo/pinkrio/corporate/contact/" type="hidden">
+                                                <input name="id_form" value="126" type="hidden">
+                                                <input name="yit_sendmail" value="Send Message" class="sendmail alignright" type="submit">
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                                <script type="text/javascript">
+                                    var messages_form_126 = {
+                                        name: "Please, fill in your name",
+                                        email: "Please, insert a valid email address",
+                                        message: "Please, insert your message"
+                                    };
+                                </script>
+                            </div>
+                            <!-- START COMMENTS -->
+                            <div id="comments">
+                            </div>
+                            <!-- END COMMENTS -->
+                        </div>
                         <div class="homedivs">
                             <h5> End of Financial Year Celebration</h5>
                             <div>
@@ -312,84 +337,31 @@ info@melissabarcafe.com.au
                             </a>
                             <hr class="borderhr">
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="col-sm-6  sayHello">
-                    <div class="col-sm-6">
-
-
-                        <a href="#">
-                            <div class="button-fill grey btnMenus">
-                                <div class="button-text">Function Packages</div>
-                                <div class="button-inside">
-                                    <div class="inside-text">Function&nbspPackages</div>
-                                </div>
-                            </div>
-
-                        </a>
-
 
                     </div>
-
-
-
                 </div>
+
                 <div class="col-sm-6">
-                    <img class="img-responsive" src="images/features/coffee-01.jpg" />
+                    <div id="googleMap" style="width:100%;height:400px;"></div>
                 </div>
             </div>
-            <!--<div class="col-sm-12">
-                <div>Click on a thumbnail for this week’s menu</div>
-                <div style="float: left;">
-                     <a href="#">
-                            <div class="button-fill grey imgHovereffect">
-                                <div class="button-text imgHover">
-                                    <img src="images/articles/img1.jpg"></div>
-                                <div class="imgAnimation">
-                                    <div class="inside-text">$18 Lunch Break<img src="images/articles/img1.jpg"></div>
-                                </div>
-                            </div>
-                        </a>
+            <div class="footer">
+                <div class="border">
+                    <hr>
                 </div>
-                 <div style="float: left;">
-                     <a href="#">
-                            <div class="button-fill grey imgHovereffect">
-                                <div class="button-text imgHover">
-                                    <img src="images/articles/img2.jpg"></div>
-                                <div class="imgAnimation">
-                                    <div class="inside-text">Happy Hour<img src="images/articles/img2.jpg"></div>
-                                </div>
-                            </div>
-                        </a>
-                </div>
-                
-                <div style="float: left;">
-                     <a href="#">
-                            <div class="button-fill grey imgHovereffect">
-                                <div class="button-text imgHover">
-                                    <img src="images/articles/img3.jpg"></div>
-                                <div class="imgAnimation">
-                                    <div class="inside-text">Function Packages<img src="images/articles/img3.jpg"></div>
-                                </div>
-                            </div>
-                        </a>
-                </div>
-            </div>-->
-            <!-- START FOOTER -->
-             <div class="footer">
-                 <div class="border"><hr></div>
-                            © 2014 Mélissa Bar Café 
-                        </div>
-
-
-            <!-- END FOOTER -->
-
-            <!-- START COPYRIGHT -->
-            
-            <!-- END COPYRIGHT -->
+                © 2014 Mélissa Bar Café
+            </div>
         </div>
-        <!-- END WRAPPER -->
+      
+        <!-- START FOOTER -->
+        
+
+
+        <!-- END FOOTER -->
+       
+      
+    </div>
+    <!-- END WRAPPER -->
     </div>
     <!-- END BG SHADOW -->
 

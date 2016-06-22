@@ -721,9 +721,12 @@ input#s { width:73%; padding:5px; }
 #yit_bot {display:none !important;}
 
 .input-prepend{ position: relative; }
-.input-prepend .add-on{ position: absolute; top: 40%; right: 0px; }
+.input-prepend .add-on{    position: absolute;
+    top: 40%;
+    padding-left: 10px;
+}
 .content .contact-form li.full .input-prepend .add-on { right: 5px; }
-.textarea-field .input-prepend .add-on{ position: absolute; top: 20px; right: 10px; }
+.textarea-field .input-prepend .add-on{ position: absolute; top: 20px; }
 .sidebar-no .textarea-field .input-prepend .add-on{ right: 15px; }
 .ie .textarea-field .input-prepend .add-on{ right: 25px; }
 .input-prepend input.error, .input-prepend textarea.error{ background-image: none !important; }
