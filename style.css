@@ -356,7 +356,7 @@ body.no_js .classic #nav ul li ul.submenu li:hover > ul, body.no_js .classic #na
 /* === SLIDER */
 .slider, #slider { margin-bottom:30px !important; }
 .mobile-slider { display: none; }
-#slider-flexslider h2, #slider-flexslider h4, #slider-flexslider p, #slider-flexslider span { color: #fff; }
+#slider-flexslider h2, #slider-flexslider h4, #slider-flexslider p, #slider-flexslider span { color: #fff;line-height:1em; }
 /* === STATIC HEADER */
 .slider.fixed-image img {
     width: auto;
