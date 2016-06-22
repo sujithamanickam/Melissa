@@ -40,9 +40,11 @@ text-align: justify;
 .sayHello {
 background-color:#f5f5f5;
 padding:20px;
+float:left;
 }
     .sayHello .col-lg-6 {
     margin-left:20%;
+    float:left;
     }
 .social img {
 padding:16px 0 0 0;
