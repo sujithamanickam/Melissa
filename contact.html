@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <!--[if IE 6]>
 <html id="ie6" class="ie" dir="ltr" lang="en-US">
@@ -90,26 +91,30 @@
     <script>
         var myCenter = new google.maps.LatLng(-37.9884840, 145.2143500);
 
-function initialize()
-{
-var mapProp = {
-  center:myCenter,
-  zoom:15
-,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 15
+            ,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
 
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
-var marker=new google.maps.Marker({
-  position:myCenter,
-  });
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
 
-marker.setMap(map);
-}
+            marker.setMap(map);
+        }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+	
+	<script>
+	
+    </script>
+	
 </head>
 <!-- END HEAD -->
 
@@ -252,6 +257,32 @@ google.maps.event.addDomListener(window, 'load', initialize);
                     }, function () {
                         $(this).children(".imgAnimation").removeClass('fullImage');
                     });
+                    $("#submit-contact-us").click(
+					function () {
+
+					    var name1 = $("#name-contact-us").val();
+					    var email1 = $("#email-contact-us").val();
+					    var message1 = $("#message-contact-us").val();
+					    $.post("processForm.php", { name: name1, email: email1, message: message1 })
+						  .done(function (data) {
+						      if (data === "success") {
+						          alert("email sent");
+						          $("#name-contact-us").val('');
+						          $("#email-contact-us").val('');
+						          $("#message-contact-us").val('');
+						      }
+						      else {
+						          alert("failed to send email");
+						      }
+
+						  })
+						  .fail(function () {
+						      alert("error");
+						  });
+					}
+						);
+
+                    //}
                 });
             </script>
 
@@ -269,7 +300,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </div>
                         <div id="content-page" class="content group">
                             <div class="hentry group">
-                                <form id="contact-form-contact-us" class="contact-form" method="post" action="sendmail.PHP" enctype="multipart/form-data">
+                              <!--  <form id="contact-form-contact-us" class="contact-form"> -->
                                     <div class="usermessagea"></div>
                                     <fieldset>
                                         <ul>
@@ -297,15 +328,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
                                                 <div class="msg-error"></div>
                                             </li>
                                             <li class="submit-button">
-                                                <input name="yit_bot" id="yit_bot" type="text">
-                                                <input name="yit_action" value="sendmail" id="yit_action" type="hidden">
-                                                <input name="yit_referer" value="http://yourinspirationtheme.com/demo/pinkrio/corporate/contact/" type="hidden">
-                                                <input name="id_form" value="126" type="hidden">
-                                                <input name="yit_sendmail" value="Send Message" class="sendmail alignright" type="submit">
+												<input type="button" id="submit-contact-us" value="Send Message" >
                                             </li>
                                         </ul>
                                     </fieldset>
-                                </form>
+                              <!--  </form>-->
                                 <script type="text/javascript">
                                     var messages_form_126 = {
                                         name: "Please, fill in your name",

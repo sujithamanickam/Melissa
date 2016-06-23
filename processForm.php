@@ -2,13 +2,13 @@
 
 // Define some constants
 	define( "RECIPIENT_NAME", "Melissa Website" );
-	define( "RECIPIENT_EMAIL", "postnetdandenong@gmail.com" );
+	define( "RECIPIENT_EMAIL", "sujithamanickam.27@gmail.com" );
 	define( "EMAIL_SUBJECT", "Website Visitor Message" );
 
 // Read the form values
 	$success = false;
-	$senderName = isset( $_POST['senderName'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['senderName'] ) : "";
-	$senderEmail = isset( $_POST['senderEmail'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['senderEmail'] ) : "";
+	$senderName = isset( $_POST['name'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['name'] ) : "";
+	$senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
 	$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
 
 // If all values exist, send the email
@@ -18,17 +18,6 @@
 		$success = mail( $recipient, EMAIL_SUBJECT, $message, $headers );
 	}
 
-// Return an appropriate response to the browser
-if ( isset($_GET["ajax"]) ) {
 	echo $success ? "success" : "error";
-} else { ?>
-	<html>
-		<head>
-			<title>Thanks!</title>
-		</head>
-		<body>
-			<?php if ( $success ) echo "<p>Thanks for sending your message! We'll get back to you shortly.</p>" ?>
-			<?php if ( !$success ) echo "<p>There was a problem sending your message. Please try again.</p>" ?>
-		</body>
-	</html>
-<?php } ?>
+// Return an appropriate response to the browser
+?>
