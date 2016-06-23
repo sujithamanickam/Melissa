@@ -70,18 +70,9 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/comment-reply.js"></script>
-    <script type="text/javascript" src="js/jquery.quicksand.js"></script>
-    <script type="text/javascript" src="js/jquery.tipsy.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    <script type="text/javascript" src="js/jquery.cycle.min.js"></script>
-    <script type="text/javascript" src="js/jquery.anythingslider.js"></script>
-    <script type="text/javascript" src="js/jquery.eislideshow.js"></script>
     <script type="text/javascript" src="js/jquery.easing.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="js/jquery.aw-showcase.js"></script>
-    <script type="text/javascript" src="js/layerslider.kreaturamedia.jquery-min.js"></script>
-    <script type="text/javascript" src="js/shortcodes.js"></script>
+    
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <!-- nav -->
     <script type="text/javascript" src="js/jquery.tweetable.js"></script>
@@ -266,18 +257,18 @@
 					    $.post("processForm.php", { name: name1, email: email1, message: message1 })
 						  .done(function (data) {
 						      if (data === "success") {
-						          alert("email sent");
+						          $("#results").text("Thanks for sending your message! We'll get back to you shortly.");
 						          $("#name-contact-us").val('');
 						          $("#email-contact-us").val('');
 						          $("#message-contact-us").val('');
 						      }
 						      else {
-						          alert("failed to send email");
+						          $("#results").text("There was a problem sending your message. Please try again.");
 						      }
 
 						  })
 						  .fail(function () {
-						      alert("error");
+						      $("#results").text("There was a problem sending your message. Please try again.");
 						  });
 					}
 						);
@@ -300,7 +291,7 @@
 </div>
                         <div id="content-page" class="content group">
                             <div class="hentry group">
-                              <!--  <form id="contact-form-contact-us" class="contact-form"> -->
+                             <form class="form-horizontal">
                                     <div class="usermessagea"></div>
                                     <fieldset>
                                         <ul>
@@ -330,9 +321,37 @@
                                             <li class="submit-button">
 												<input type="button" id="submit-contact-us" value="Send Message" >
                                             </li>
+                                            <li class="submit-button">
+												<span  id="results" ></span>
+                                            </li>
+                                            
                                         </ul>
                                     </fieldset>
-                              <!--  </form>-->
+                               </form>
+                                <!--<form class="form-horizontal">
+  <div class="form-group">
+       <div class="col-sm-10">
+      <input type="email"  class="form-control" id="inputEmail3" placeholder="Name">
+    </div>
+  </div>
+  <div class="form-group">
+     <div class="col-sm-10">
+      <input type="" class="form-control" id="inputPassword3" placeholder="e-mail">
+    </div>
+  </div>
+<div class="form-group">
+    
+    <div class="col-sm-10">
+      <input type="" class="form-control" id="Password1" placeholder="Comments">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>-->
                                 <script type="text/javascript">
                                     var messages_form_126 = {
                                         name: "Please, fill in your name",
@@ -345,24 +364,7 @@
                     </div>
                 </div>
 
-                     -             <!----          <ul class="tt-toggle grid_6">
- -                             <li class="sub-toggle active">
- -                                 <div class="toggle-head">
- -                                     <div class="toggle-head-sign"></div>
- -                                     <h4> Enquiry </h4>
- -                                 </div>
- -                                 <div class="">
- -                                     <form method="post" id="contactForm" action="processForm.php">
- -                                         <input type="text" name="senderName" id="senderName" placeholder="Name" class="requiredField" />
- -                                         <input type="text" name="senderEmail" id="senderEmail" placeholder="Email Address" class="requiredField email" />
- -                                         <textarea name="message" id="message" placeholder="Message" class="requiredField" rows="8"></textarea>
- -                                         <input type="submit" id="sendMessage" name="sendMessage" value="SEND" />
- -                                         <span>  </span>
- -                                     </form><!-- end form 
- -                                 </div>
- -                             </li>
- -                         </ul>-->
-
+                     -            
                 <div class="col-sm-6">
                      -                     <div id="googleMap" style="width:100%;height:400px;"></div>
 
