@@ -67,19 +67,9 @@
 
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/comment-reply.js"></script>
-    <script type="text/javascript" src="js/jquery.quicksand.js"></script>
+    <!---needed for nav-->
     <script type="text/javascript" src="js/jquery.tipsy.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    <script type="text/javascript" src="js/jquery.cycle.min.js"></script>
-    <script type="text/javascript" src="js/jquery.anythingslider.js"></script>
-    <script type="text/javascript" src="js/jquery.eislideshow.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="js/jquery.aw-showcase.js"></script>
-    <script type="text/javascript" src="js/layerslider.kreaturamedia.jquery-min.js"></script>
-    <script type="text/javascript" src="js/shortcodes.js"></script>
-    <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <!-- nav -->
     <script type="text/javascript" src="js/jquery.tweetable.js"></script>
 
@@ -106,14 +96,11 @@
                         </a>
                     </div>
                     <!-- END LOGO -->
-
                     <div id="sidebar-header" class="group">
                         <div class="widget-first widget yit_text_quote">
                         </div>
                     </div>
                     <div class="clearer"></div>
-
-
                     <!-- START MAIN NAVIGATION -->
                     <div class="menu classic">
                         <ul id="nav" class="menu">
@@ -134,7 +121,7 @@
                             </li>
 
                             <li>
-                                <a href="whatsOn.html">what's on</a>
+                                <a href="whatsOn.html" class="activeMenu">what's on</a>
 
                             </li>
 
@@ -164,7 +151,7 @@
             </div>
             <!-- END HEADER -->
             <!-- BEGIN NIVO SLIDER -->
-            <div id="slider-flexslider" class="slider flexslider" style="width:100%; height: 400px;">
+            <div id="slider-flexslider" class="slider flexslider" style="width: 100%; height: 400px;">
                 <ul class="slides">
                     <li>
                         <img src="images/slider-flex/gallery.jpg" alt="What's On!" title="What's On!" />
@@ -231,7 +218,7 @@
             <div class="mainDiv whatsOn">
 
                 <div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <h3>What's On</h3>
                         <!--<div class="justify">
                     Look no further than Melissa Restaurant & Bar for your next event! Be it a social gathering with friends, cocktail party or group dinner – we have a space to suit your occasion. Exclusive dining spaces are available for groups of up to 90 guests and cocktail areas available for groups of 200 or less.
@@ -243,48 +230,62 @@
                 </div>-->
 
                         <div class="col-sm-12">
-                            <div>Click on a thumbnail for this week’s menu</div>
-                            <div style="float: left;">
+                            <div class="col-sm-4">
                                 <a href="#">
-                                    <div class="button-fill grey imgHovereffect">
-                                        <div class="button-text imgHover">
-                                            <img src="images/articles/img1.jpg">
+                                    <div class="grey imgHovereffect">
+                                        <div class="grow pic">
+                                            <img src="images/projects/locationBig.jpg">
                                         </div>
-                                        <div class="imgAnimation">
-                                            <div class="inside-text">$18 Lunch Break<img src="images/articles/img1.jpg"></div>
-                                        </div>
+
                                     </div>
                                 </a>
+
                             </div>
-                            <div style="float: left;">
-                                <a href="#">
-                                    <div class="button-fill grey imgHovereffect">
-                                        <div class="button-text imgHover">
-                                            <img src="images/articles/img2.jpg">
-                                        </div>
-                                        <div class="imgAnimation">
-                                            <div class="inside-text">Happy Hour<img src="images/articles/img2.jpg"></div>
-                                        </div>
-                                    </div>
-                                </a>
+                            <div class="col-sm-8 whatsOnContent">
+                                Happy Hour
+                               <p>We offer Happy Hour</p>
+                                <p>7.00am - 3:00pm  Monday & Tuesday</p>
+
+                                <p>7:00am - 10:00pm Wednesday to Friday</p>
+                                <p>8:00am to 10:00pm Saturday & Sunday</p>
+
+
                             </div>
 
-                            <div style="float: left;">
+                            
+
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="col-sm-4">
                                 <a href="#">
-                                    <div class="button-fill grey imgHovereffect">
-                                        <div class="button-text imgHover">
-                                            <img src="images/articles/img3.jpg">
+                                    <div class="grey imgHovereffect">
+                                        <div class="grow pic">
+                                            <img src="images/projects/whatson.jpg">
                                         </div>
-                                        <div class="imgAnimation">
-                                            <div class="inside-text">Function Packages<img src="images/articles/img3.jpg"></div>
-                                        </div>
+
                                     </div>
                                 </a>
+
                             </div>
+                            <div class="col-sm-8 whatsOnContent">
+                               Express Lunch
+                               <p>We offer Happy Hour</p>
+                                <p>7.00am - 3:00pm  Monday & Tuesday</p>
+
+                                <p>7:00am - 10:00pm Wednesday to Friday</p>
+                                <p>8:00am to 10:00pm Saturday & Sunday</p>
+
+
+                            </div>
+
+                            
+
                         </div>
 
                         <div class="homedivs">
-                            <h5>MAY WE ENTICE YOU....</h5>
+                        </div>
+                        <!--<div class="homedivs">
+                            <h5>Express Lunch Menu</h5>
                             <div>
                                 It is a long established fact that a reader will be
                                 distracted by the readable content of a page when looking at
@@ -300,37 +301,21 @@
 
                             </a>
                             <hr class="borderhr">
-                        </div>
-                        <div class="homedivs">
-                            <h5>MAY WE ENTICE YOU....</h5>
-                            <div>
-                                It is a long established fact that a reader will be
-                                distracted by the readable content of a page when looking at
-                                its layout.
-                            </div>
-                            <a href="#">
-                                <div class="button-fill grey">
-                                    <div class="button-text">More Info</div>
-                                    <div class="button-inside">
-                                        <div class="inside-text">More Info</div>
-                                    </div>
-                                </div>
-
-                            </a>
-                            <hr class="borderhr">
-                        </div>
+                        </div>-->
                     </div>
-                    <div class="col-sm-6"><img class="img-responsive functions" src="images/projects/locationBig.jpg" /></div>
+                    <div class="footer">
+                <div class="border">
+                    <hr>
+                </div>
+                © 2014 Mélissa Bar Café
+            </div>
                 </div>
 
 
 
             </div>
             <!-- END BG SHADOW -->
-            <div class="footer">
-                <div class="border"><hr></div>
-                © 2014 Mélissa Bar Café
-            </div>
+            
             <script type="text/javascript" src="js/jquery.custom.js"></script>
             <script type="text/javascript" src="js/contact.js"></script>
             <script type="text/javascript" src="js/jquery.mobilemenu.js"></script>
