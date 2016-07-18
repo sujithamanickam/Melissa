@@ -30,7 +30,7 @@ text-align:center;
 .sayHello h3 {
  margin-top:0;
 }
-    .sayHello .col-lg-6 {
+    .sayHello .col-sm-6 {
     float:left;
     }
 .social{
@@ -177,5 +177,5 @@ border-top: 1px solid;
 padding:20px;
 }
 .whatsOn h3 {
-    padding-left:10px;
+    padding-left:30px;
 }

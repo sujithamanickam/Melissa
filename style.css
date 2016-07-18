@@ -128,7 +128,7 @@ html { min-height:101% }
 
 /* ===== HEADER ===== */
 #header {
-     padding-top: 15px;
+     padding-top: 5px;
     position: relative;
 }
 
@@ -174,7 +174,9 @@ html { min-height:101% }
 .gecko .menu-select select { width:120%; }
 .menu-select select option { background:none; width:100%; }
 .menu-select .arrow-icon { position:absolute; height:100%; width:100%; background:#d8dbdb url('images/menu-select-arrow.png') no-repeat 95% center; top:0; }
-
+.menus a {
+padding:0;
+}
 
 #header div.menu {background-color:#fff; }
 ul li {
@@ -875,9 +877,7 @@ border-radius: 20% 0px;
   float: left;
     margin: 10px;
 }
-.whatsOn .col-sm-12 {
-  padding:0;
-}
+
 
 /*Image Effects
 
@@ -1046,11 +1046,21 @@ padding-top:25px;
   float: left;
   height: 300px;
   width: 300px;
-  margin: 20px;
+  margin-bottom: 20px;
   overflow: hidden;
   
   /*-webkit-box-shadow: 5px 5px 5px #111;
           box-shadow: 5px 5px 5px #111;*/  
 }
 .button-fill figcaption {
-color:#000;} 
+color:#000;}
+.happyHour {
+float:left;
+padding:0 !important;
+}
+.whatsOnAlign {
+padding-left:10px;
+}
+.button-fill {
+margin-top:10px;
+}
