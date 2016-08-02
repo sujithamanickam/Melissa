@@ -125,6 +125,7 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 .icon-print:before                { content: "\f02f"; }
 
 .icon-camera:before               { content: "\f030"; }
+.icon-mobile-phone:before         {content: "\f10b"; }
 .icon-font:before                 { content: "\f031"; }
 .icon-bold:before                 { content: "\f032"; }
 .icon-italic:before               { content: "\f033"; }

@@ -677,7 +677,7 @@ input#s { width:73%; padding:5px; }
 /* ===== CONTACT FORM ===== */                
 .content .contact-form { margin-top:30px; width:104%; }   
 .content .contact-form fieldset {padding:0;} 
-#name-contact-us,#email-contact-us {width:60%;}          
+#name-contact-us,#email-contact-us,#message-contact-us {width:60%;}          
 .content .contact-form ul { margin:0; list-style:none; }  
 .content .contact-form li { width: 44.2%; float: left; margin: 0 5% 2% 0; }
 .content .contact-form li.on-left { float:left; }
@@ -1063,4 +1063,17 @@ padding-left:10px;
 }
 .button-fill {
 margin-top:10px;
+}
+.btn-primary
+{
+border: medium none;
+padding: 10px;
+text-align: center;
+display: inline-block;
+border-radius: 2px;
+margin-top: 10p
+}
+/*employment*/
+.employment h4 {
+font-size: 3.5em;
 }
