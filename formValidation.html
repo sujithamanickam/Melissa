@@ -1,0 +1,105 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- CSS ===================== -->
+    <!-- load bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <style>
+        body    { padding-top:30px; }
+    </style>
+
+    <!-- JS ===================== -->
+    <!-- load angular -->
+  
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</head>
+
+<!-- apply angular app and controller to our body -->
+<body ng-app="validationApp" ng-controller="mainController as vm">
+<div class="container">
+<div class="col-sm-8 col-sm-offset-2">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header"><h1>	Employment Form</h1></div>
+
+    <!-- FORM -->
+    <!-- pass in the variable if our form is valid or invalid -->
+    <form name="userForm" ng-submit="vm.submitForm(userForm.$valid)" validate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+<!--- <input
+       ng-model="{ string }"
+       name="{ string }"
+       required
+       ng-required="{ boolean }"
+       ng-minlength="{ number }"
+       ng-maxlength="{ number }"
+       ng-pattern="{ string }"
+       ng-change="{ string }">
+    </input>---->
+        <!-- NAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.firstname.$invalid && !userForm.firstname.$pristine }">
+            <label>First Name</label>
+			<input type="text" name="firstname" class="form-control" ng-model="vm.firstname" ng-minlength="3"  required  >
+			<p ng-show="userForm.firstname.$error.minlength" class="help-block">First name is too short.</p>
+        </div>
+		<div class="form-group" ng-class="{ 'has-error' : userForm.lastname.$invalid && !userForm.lastname.$pristine }">
+            <label>Last Name</label>
+			<input type="text" name="lastname" class="form-control" ng-model="vm.lastname" ng-minlength="3"  required  >
+			<p ng-show="userForm.lastname.$error.minlength" class="help-block">Last name is too short.</p>
+        </div>
+		<div class="form-group" ng-class="{ 'has-error' : userForm.postcode.$invalid && !userForm.postcode.$pristine }">
+            <label>Postcode</label>
+            <input type="number" name="postcode" class="form-control" ng-model="vm.postcode" required  id="postcode_employment">
+            <p ng-show="userForm.postcode.$invalid && !userForm.postcode.$pristine" class="help-block">Enter numbers</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+            <label>Email</label>
+            <input type="email" name="name" class="form-control control-label" for="inputSuccess" ng-model="vm.email" required  id="email_employment">
+			<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+            <label>Mobile</label>
+            <input type="number" name="mobile" class="form-control" ng-model="vm.mobile" required  id="mobile_employment">
+            <p ng-show="userForm.mobile.$invalid && !userForm.mobile.$pristine" class="help-block">Enter a valid Mobile Number</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : userForm.position.$dirty && userForm.position.$invalid && !userForm.position.$pristine }">
+            <label>Position</label>
+			   <select class="form-control"  name="service_id"  
+					ng-model="vm.position" 
+					ng-options="service.ServiceID as service.ServiceName for service in vm.services"
+					required> 
+				  <option value="">Select Service</option> 
+				</select> 
+    <span class="help-block" ng-show="userForm.service_id.$dirty && userForm.service_id.$invalid">Select the Position applying for</span>
+
+<!--			
+			<select  class="form-control" id="position_employment" ng-model="vm.position" name="position" required  >
+				  <option value ="" >Select....</option>
+				  <option value="management">Management</option>
+				  <option value="floorstaff">Floor Staff</option>
+				  <option value="barista">Barista</option>
+				  <option value="chefs">Chefs</option>
+				  <option value="kitchenhand">Kitchen Hand</option>
+			  </select>
+			  
+			  <p ng-show="userForm.position.$dirty && userForm.position.$invalid && !userForm.position.$pristine" class="help-block">Select the Position</p>
+-->      
+	  </div>
+        <div class="form-group">
+            <label>Message</label>
+             <textarea class="form-control" rows="5" type="text" name="name"  ng-model="vm.message" required  id="message_employment" ></textarea>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn btn-primary">Send Message</button>
+
+		<div class="form-group">
+            <label>{{vm.updateMessageToUser}}</label>
+			</div>
+    </form>
+
+</div><!-- col-sm-8 -->
+</div><!-- /container -->
+</body>
+</html>

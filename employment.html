@@ -171,7 +171,7 @@
 
                             </li>
                              <li>
-                                <a href="contact.html" class="activeMenu">employment</a>
+                                <a href="employment.html" class="activeMenu">employment</a>
 
                             </li>
 
@@ -253,23 +253,33 @@
                     $("#submit-contact-us").click(
 					function () {
 
-					    var name1 = $("#name-contact-us").val();
-					    var email1 = $("#email-contact-us").val();
-					    var message1 = $("#message-contact-us").val();
-					    $.post("processForm.php", { name: name1, email: email1, message: message1 })
+					    var first_name1 = $("#first_name_employment").val();
+					    var last_name1 = $("#last_name_employment").val();
+					    var postcode1 = $("#postcode_employment").val();
+					    var email1 = $("#email_employment").val();
+					    var mobile1 = $("#mobile_employment").val();
+					    var position1 = $("#position_employment").val();
+					    var message1 = $("#message_employment").val();
+					    $.post("processApplication.php", { first_name: first_name1, last_name: last_name1, postcode: postcode1, email: email1, mobile: mobile1, position: position1, message: message1 })
 						  .done(function (data) {
 						      if (data === "success") {
 						          $("#results").text("Thanks for sending your message! We'll get back to you shortly.");
-						          $("#name-contact-us").val('');
-						          $("#email-contact-us").val('');
-						          $("#message-contact-us").val('');
+						          $("#first_name_employment").val('');
+						          $("#last_name_employment").val('');
+						          $("#postcode_employment").val('');
+						          $("#email_employment").val('');
+						          $("#mobile_employment").val('');
+						          //$("#position_employment").val();
+						          $("#message_employment").val('');
 						      }
 						      else {
+						          
 						          $("#results").text("There was a problem sending your message. Please try again.");
 						      }
 
 						  })
-						  .fail(function () {
+						  .fail(function (error) {
+
 						      $("#results").text("There was a problem sending your message. Please try again.");
 						  });
 					}
@@ -300,7 +310,7 @@
                                                 </label>
                                                 <div class="input-prepend">
                                                     <span class="add-on"><i class="icon-user"></i></span>
-                                                    <input name="name" id="first-name-contact-us" class="required" value="" type="text">
+                                                    <input name="name" id="first_name_employment" class="required" value="" type="text">
                                                 </div>
                                                 <div class="msg-error"></div>
                                             </li>
@@ -312,7 +322,7 @@
                                                 </label>
                                                 <div class="input-prepend">
                                                     <span class="add-on"><i class="icon-user"></i></span>
-                                                    <input name="name" id="last-name-contact-us" class="required" value="" type="text">
+                                                    <input name="name" id="last_name_employment" class="required" value="" type="text">
                                                 </div>
                                                 <div class="msg-error"></div>
                                             </li>
@@ -324,7 +334,7 @@
                                                 </label>
                                                 <div class="input-prepend">
                                                     <span class="add-on"><i class="icon-envelope"></i></span>
-                                                    <input name="email" id="Text1" class="required email-validate" value="" type="text">
+                                                    <input name="postcode" id="postcode_employment" class="required email-validate" value="" type="text">
                                                 </div>
                                                 <div class="msg-error"></div>
                                             </li>
@@ -336,7 +346,7 @@
                                                 </label>
                                                 <div class="input-prepend">
                                                     <span class="add-on"><i class="icon-bar-chart"></i></span>
-                                                    <input name="email" id="email-contact-us" class="required email-validate" value="" type="text">
+                                                    <input name="email" id="email_employment" class="required email-validate" value="" type="text">
                                                 </div>
                                                 <div class="msg-error"></div>
                                             </li>
@@ -348,7 +358,7 @@
                                                 </label>
                                                 <div class="input-prepend">
                                                     <span class="add-on"><i class="icon-mobile-phone"></i></span>
-                                                    <input name="name" id="mobile-contact-us" class="required" value="" type="text">
+                                                    <input name="name" id="mobile_employment" class="required" value="" type="text">
                                                 </div>
                                                 <div class="msg-error"></div>
                                             </li>
@@ -358,9 +368,9 @@
                                                     <br>
                                                     <span class="sublabel">Position</span><br>
                                                 </label>
-                                                <div class="input-prepend">
+                                                <div class="input-prepend" >
                                                     <span class="add-on"><i class="icon-mobile-phone"></i></span>
-                                                    <select>
+                                                    <select id="position_employment">
                                                         <option  selected="selected">Select....</option>
                                                         <option value="management">Management</option>
                                                         <option value="floorstaff">Floor Staff</option>
@@ -380,7 +390,7 @@
                                                 </label>
                                                 <div class="input-prepend">
                                                     <span class="add-on"><i class="icon-pencil"></i></span>
-                                                    <textarea name="message" id="message-contact-us" rows="8" cols="30" class="required"></textarea>
+                                                    <textarea name="message" id="message_employment" rows="8" cols="30" class="required"></textarea>
                                                 </div>
                                                 <div class="msg-error"></div>
                                             </li>
